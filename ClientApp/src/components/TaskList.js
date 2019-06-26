@@ -1,7 +1,13 @@
 import React, { Component } from 'react';
+import TaskItem from './TaskItem';
 
 class TaskList extends Component {
   render () {
+        var { tasks } = this.props;
+        var elmTaks = tasks.map((task, index) =>{
+            return <TaskItem key={task.id} index = {index} task={task} />
+        });
+
     return (        
         <div className="row mt-15">
             <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -29,24 +35,9 @@ class TaskList extends Component {
                     </td>
                     <td />
                 </tr>
-                <tr>
-                    <td>1</td>
-                    <td>Học lập trình</td>
-                    <td className="text-center">
-                    <span className="label label-success">
-                        Kích Hoạt
-                    </span>
-                    </td>
-                    <td className="text-center">
-                    <button type="button" className="btn btn-warning">
-                        <span className="fa fa-pencil mr-5" />Sửa
-                    </button>
-                    &nbsp;
-                    <button type="button" className="btn btn-danger">
-                        <span className="" />Xóa
-                    </button>
-                    </td>
-                </tr>
+
+                { elmTaks }
+
                 </tbody>
             </table>
             </div>

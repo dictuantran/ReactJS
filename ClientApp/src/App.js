@@ -26,17 +26,17 @@ class App extends Component {
         var tasks = [
             {
                 id: this.generateID(),
-                name: "Hoc lap trinh",
+                name: "Học lập trình",
                 status: true
             },
             {
                 id: this.generateID(),
-                name: "The duc",
+                name: "Thể dục",
                 status: true
             },
             {
                 id: this.generateID(),
-                name: "Di boi",
+                name: "Đi cafe",
                 status: false
             },
         ]
@@ -57,31 +57,32 @@ class App extends Component {
     }
 
     render () {
-      return (
-        <div className="container">
-        <div className="text-center">
-          <h1>Quản Lý Công Việc</h1>
-          <hr />
-        </div>
-        <div className="row">
-          <div className="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-            <TaskForm />
-          </div>
-          <div className="col-xs-8 col-sm-8 col-md-8 col-lg-8">
-            <button type="button" className="btn btn-primary">
-              <span className="" />Thêm Công Việc
-            </button>&nbsp;
-            <button type="button" className="btn btn-danger ml-5"
-                onClick={ this.onGenerateData }>
-                Generate Data
-            </button>
-            <Control />
+        var {tasks } = this.state;
+        return (
+            <div className="container">
+            <div className="text-center">
+            <h1>Quản Lý Công Việc</h1>
+            <hr />
+            </div>
+            <div className="row">
+            <div className="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                <TaskForm />
+            </div>
+            <div className="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                <button type="button" className="btn btn-primary">
+                <span className="" />Thêm Công Việc
+                </button>&nbsp;
+                <button type="button" className="btn btn-danger ml-5"
+                    onClick={ this.onGenerateData }>
+                    Generate Data
+                </button>
+                <Control />
 
-            <TaskList />
-          </div>
+                <TaskList tasks={ tasks }/>
+            </div>
+            </div>
         </div>
-      </div>
-      )
+        )
     }
 }
 

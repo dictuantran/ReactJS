@@ -6,7 +6,7 @@ class Sort extends Component {
         <div className="dropdown">
             <button className="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                 Sắp Xếp <span className="fa fa-caret-square-o-down ml-5" />
-            </button>
+            </button>&nbsp;
             <ul className="dropdown-menu" aria-labelledby="dropdownMenu1">
                 <li>
                 <a role="button">
