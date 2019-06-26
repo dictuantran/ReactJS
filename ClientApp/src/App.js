@@ -69,7 +69,7 @@ class App extends Component {
           </div>
           <div className="col-xs-8 col-sm-8 col-md-8 col-lg-8">
             <button type="button" className="btn btn-primary">
-              <span className="fa fa-plus mr-5" />Thêm Công Việc
+              <span className="" />Thêm Công Việc
             </button>&nbsp;
             <button type="button" className="btn btn-danger ml-5"
                 onClick={ this.onGenerateData }>

@@ -43,7 +43,7 @@ class TaskList extends Component {
                     </button>
                     &nbsp;
                     <button type="button" className="btn btn-danger">
-                        <span className="fa fa-trash mr-5" />Xóa
+                        <span className="" />Xóa
                     </button>
                     </td>
                 </tr>
