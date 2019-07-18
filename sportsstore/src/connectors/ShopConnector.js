@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import { Switch, Route, Redirect } 
-    from "react-router-dom"
+import { Switch, Route, Redirect } from "react-router-dom"
 import { connect } from "react-redux";
 import { loadData } from "../actions/ActionCreators";
 import { DataTypes } from "../constants/Types";
@@ -27,11 +26,12 @@ export const ShopConnector = connect(mapStateToProps, mapDispatchToProps)(
     class extends Component {
         render() {
             return <Switch>
-                <Route path="/shop/products/:category?"
-                    render={ (routeProps) => 
-                        <Shop { ...this.props } { ...routeProps } 
-                            products={ filterProducts(this.props.products, 
-                                routeProps.match.params.category) } />} />
+                <Route path="/shop/products/:category?"                 
+                    render={(routeProps)=> 
+                        <Shop {...this.props} {...routeProps} 
+                            products={ filterProducts(this.props.products,
+                                routeProps.match.params.category)}/>
+                    }/>
                 <Route path="/shop/cart" render={ (routeProps) => 
                         <CartDetails { ...this.props } { ...routeProps }  />} />                                
                 <Redirect to="/shop/products" />
