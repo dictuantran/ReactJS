@@ -2,12 +2,12 @@ import React, { Component } from "react";
 import { Switch, Route, Redirect } 
     from "react-router-dom"
 import { connect } from "react-redux";
-import { loadData } from "../data/ActionCreators";
-import { DataTypes } from "../data/Types";
-import { Shop } from "./Shop";
+import { loadData } from "../actions/ActionCreators";
+import { DataTypes } from "../constants/Types";
+import { Shop } from "../components/shop/Shop";
 import { addToCart, updateCartQuantity, removeFromCart, clearCart } 
-    from "../data/CartActionCreators";
-import { CartDetails } from "./CartDetails";
+    from "../actions/CartActionCreators";
+import { CartDetails } from "../components/shop/CartDetails";
 
 const mapStateToProps = (dataStore) => ({
     ...dataStore

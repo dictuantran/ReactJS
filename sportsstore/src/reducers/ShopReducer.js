@@ -1,4 +1,4 @@
-import { ActionTypes } from "./Types";
+import { ActionTypes } from "../constants/Types";
 
 export const ShopReducer = (storeData, action) => {
     switch(action.type) {

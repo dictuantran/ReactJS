@@ -1,4 +1,4 @@
-import { ActionTypes } from "./Types";
+import { ActionTypes } from "../constants/Types";
 
 export const CartReducer = (storeData, action) => {
     let newStore = { cart: [], cartItems: 0, cartPrice: 0, ...storeData }

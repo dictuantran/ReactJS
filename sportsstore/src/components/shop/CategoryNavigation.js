@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 //import { Link } from "react-router-dom";
-import { ToggleLink } from "../ToggleLink";
+import { ToggleLink } from "../../ToggleLink";
 
 export class CategoryNavigation extends Component {
 

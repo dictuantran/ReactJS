@@ -21,7 +21,22 @@ module.exports = function () {
             { id: 8, name: "Human Chess Board", category: "Chess", 
                 description: "A fun game for the family", price: 75 },
             { id: 9, name: "Bling Bling King", category: "Chess", 
+                description: "Gold-plated, diamond-studded King", price: 1200 },
+            { id: 10, name: "Corner Flags", category: "Soccer", 
+                description: "Give your playing field a professional touch", 
+                price: 34.95 },
+            { id: 11, name: "Stadium", category: "Soccer", 
+                description: "Flat-packed 35,000-seat stadium", price: 79500 },
+            { id: 12, name: "Thinking Cap", category: "Chess", 
+                description: "Improve brain efficiency by 75%", price: 16 },
+            { id: 13, name: "Unsteady Chair", category: "Chess", 
+                description: "Secretly give your opponent a disadvantage", 
+                price: 29.95 },
+            { id: 15, name: "Human Chess Board", category: "Chess", 
+                description: "A fun game for the family", price: 75 },
+            { id: 16, name: "Bling Bling King", category: "Chess", 
                 description: "Gold-plated, diamond-studded King", price: 1200 }
+                
         ],
         orders: []
     }
