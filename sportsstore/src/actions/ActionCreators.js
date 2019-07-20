@@ -12,5 +12,11 @@ export const loadData = (dataType, params) => ({
                     total: Number(response.headers["x-total-count"]),
                     params
                 })
-    )            
+    )                
 });
+
+export const setPageSize = (newSize) => 
+    ({ type: ActionTypes.DATA_SET_PAGESIZE, payload: newSize });
+
+export const setSortProperty = (newProp) => 
+    ({ type: ActionTypes.DATA_SET_SORT_PROPERTY, payload: newProp });
