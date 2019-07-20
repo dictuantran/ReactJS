@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { CategoryNavigation } from "./CategoryNavigation";
+import { CategoryNavigation } from "../../routing/CategoryNavigation";
 import { ProductList } from "./ProductList";
 import { CartSummary } from "./CartSummary";
 
