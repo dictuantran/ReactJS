@@ -11,3 +11,5 @@ export const RestUrls = {
 }
 
 export const GraphQlUrl = `${protocol}://${hostname}:${port}/graphql`;
+
+export const AuthUrl = `${protocol}://${hostname}:${port}/login`;
