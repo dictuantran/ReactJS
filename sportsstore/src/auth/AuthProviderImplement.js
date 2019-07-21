@@ -5,26 +5,26 @@ import { AuthUrl } from "../constants/Urls";
 
 export class AuthProviderImplement extends Component {
 
-    constructor(props){
+    constructor(props) {
         super(props);
         this.state = {
             isAuthenticated: false,
-            webToken: null
+            webToken: null       
         }
     }
 
     authenticate = (credentials) => {
+        
         return Axios.post(AuthUrl, credentials).then(response => {
-            if(response.data.success === true) {
+            if (response.data.success === true) {
                 this.setState({
-                    isAuthenticated: true,
-                    webToken: response.data.token
+                    isAuthenticated: true, 
+                    webToken:response.data.token
                 })
-
                 return true;
             } else {
                 throw new Error("Invalid Credentials");
-            }             
+            }
         })
     }
 
@@ -33,8 +33,8 @@ export class AuthProviderImplement extends Component {
     }
 
     render = () => 
-        <AuthContext.Provider value={{...this.setState, 
-            authenticate: this.authenticate, 
-            signout: this.signout }}> { this.props.children }
+        <AuthContext.Provider value={ {...this.state, 
+                authenticate: this.authenticate, signout: this.signout}}>
+            { this.props.children }        
         </AuthContext.Provider>
 }
