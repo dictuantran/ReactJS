@@ -37,7 +37,7 @@ export const ShopConnector = connect(ds => ds, mapDispatchToProps)(
 
         render() {
             return <Switch>
-               <Redirect from="/shop/products/:categroy" 
+                <Redirect from="/shop/products/:category" 
                         to="/shop/products/:category/1"
                         exact={true} />
                 <Route path={ "/shop/:section?/:category?/:page?"}
