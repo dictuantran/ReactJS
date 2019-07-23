@@ -8,6 +8,7 @@ export class DataGetter extends Component {
     }
 
     componentDidUpdate = () => this.getData();
+    componentDidMount = () => this.getData();
 
     getData = () => {
         const dsData = this.props.products_params || {};
