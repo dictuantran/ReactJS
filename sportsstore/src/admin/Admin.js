@@ -5,6 +5,9 @@ import { GraphQlUrl } from "../constants/Urls";
 import { ToggleLink } from "../routing/ToggleLink";
 import { Route, Redirect, Switch } from "react-router-dom";
 import { OrdersConnector } from "./connectors/OrdersConnector";
+import { ConnectedProducts } from "./connectors/ProductsConnector";
+import { ProductEditor } from "./product/ProductEditor";
+import { ProductCreator } from "./product/ProductCreator";
 import { AuthPrompt } from "../auth/AuthPrompt";
 import { authWrapper } from "../auth/AuthWrapper";
 
@@ -33,6 +36,7 @@ export const Admin = authWrapper(class extends Component {
                 <div className="row">
                     <div className="col-3 p-2">
                         <ToggleLink to="/admin/orders">Orders</ToggleLink>
+                        <ToggleLink to="/admin/products">Products</ToggleLink>
                         {
                             this.props.isAuthenticated &&
                             <button onClick={ this.props.signout }
@@ -48,6 +52,9 @@ export const Admin = authWrapper(class extends Component {
                                 <Route component={ AuthPrompt } />
                             }
                             <Route path="/admin/orders" component={ OrdersConnector } />
+                            <Route path="/admin/products/create" component={ ProductCreator } />
+                            <Route path="/admin/products/:id" component={ ProductEditor } />
+                            <Route path="/admin/products" component={ ConnectedProducts } />
                             <Redirect to="/admin/orders" />
                         </Switch>
                     </div>
