@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { PaginationControls } from "../../components/controls/PaginationControls";
 import { ProductsRow } from "../product/ProductsRow";
 import { Link } from "react-router-dom";
+import { Search } from "../../components/controls/Search";
 
 export class ProductTable extends Component {
 
@@ -9,6 +10,8 @@ export class ProductTable extends Component {
         <h4 className="bg-info text-white text-center p-2">
             { this.props.totalSize } Products
         </h4>
+        <Search />
+
         <PaginationControls keys={["ID", "Name", "Category"]}
             { ...this.props } />
 

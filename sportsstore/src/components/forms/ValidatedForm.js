@@ -30,11 +30,17 @@ export class ValidatedForm extends Component {
         });
     }
 
+    handleKeyDown = (e) => {
+        if(e.key === 'Enter') {
+            this.handleSubmit();
+        }
+    }
+
     registerRef = (element) => {
         if (element !== null) {
             this.formElements[element.name] = element;
         }
-    }
+    }    
 
     renderElement = (modelItem) => {
         const name = modelItem.name || modelItem.label.toLowerCase();
@@ -42,7 +48,7 @@ export class ValidatedForm extends Component {
             <label>{ modelItem.label }</label>
             <ValidationError errors={ this.state.validationErrors[name] } />
             <input className="form-control" name={ name } ref={ this.registerRef }
-                { ...this.props.defaultAttrs } { ...modelItem.attrs } />            
+                { ...this.props.defaultAttrs } { ...modelItem.attrs } onKeyDown={this.handleKeyDown} />
         </div>
     }
 

@@ -13,7 +13,7 @@ export const AuthPrompt = withRouter(authWrapper(class extends Component {
         this.defaultAttrs = { required: true };
         this.formModel = [
             { label: "Username", attrs: { defaultValue: "admin"}}, 
-            { label: "Password", attrs: { type: "password"} }, 
+            { label: "Password", attrs: { type: "password"} },            
         ];        
     }
 
